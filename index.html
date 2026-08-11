@@ -1009,7 +1009,10 @@
     const grid = document.getElementById(id);
     if (!grid) return;
 
-    const items = products.filter(p => p.category === category);
+    const items = products.filter(p =>
+  String(p.category || "").replace(/^["']|["']$/g, "").trim().toLowerCase() ===
+  String(category).trim().toLowerCase()
+);
 
     grid.innerHTML = items.map(p => `
       <article class="product">
