@@ -1,7 +1,7 @@
 ---
 name: Wrangler Southwestern Aztec Tote Handbag.
 price: 25
-category: "Handbags"
+category: Handbags
 description: >-
   Beautiful Wrangler western-style tote handbag featuring a
   Southwestern/Aztec-inspired pattern with brown trim and handles. Great
@@ -28,4 +28,5 @@ description: >-
 
   * Great for western, rodeo, country, or everyday wear
 image: /images/uploads/img_3782.jpeg
+payment_link: https://buy.stripe.com/4gM9ASgTN3cBaIgfGD7Re00
 ---
