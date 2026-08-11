@@ -881,6 +881,7 @@
           <div class="category"><h3>Handbags</h3></div>
           <div class="category"><h3>Home & More</h3></div>
         </div>
+        <div class="products" id="cms-accessories"></div>
       </div>
     </section>
 
@@ -989,16 +990,25 @@
             return {
               name: get("name"),
               price: get("price"),
+              category: get("category"),
               image: get("image")
             };
           })
       )
   ))
   .then(products => {
-    const grid = document.getElementById("cms-products");
+  const targets = {
+    "New Clothes": "cms-products",
+    "Accessories & More": "cms-accessories"
+  };
+
+  Object.entries(targets).forEach(([category, id]) => {
+    const grid = document.getElementById(id);
     if (!grid) return;
 
-    grid.innerHTML = products.map(p => `
+    const items = products.filter(p => p.category === category);
+
+    grid.innerHTML = items.map(p => `
       <article class="product">
         <div class="product-visual">
           ${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.name)}">` : ""}
@@ -1009,11 +1019,12 @@
         </div>
       </article>
     `).join("");
-  })
-  .catch(() => {
-    const grid = document.getElementById("cms-products");
-    if (grid) grid.innerHTML = "<p>Products coming soon.</p>";
   });
+})
+.catch(() => {
+  const grid = document.getElementById("cms-products");
+  if (grid) grid.innerHTML = "<p>Products coming soon.</p>";
+});
 })();
 </script>
 
