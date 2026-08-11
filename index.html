@@ -1080,7 +1080,7 @@
           <div class="product-info">
             <h3>${product.name || ""}</h3>
             <strong>$${product.price || ""}</strong>
-            ${String(product.payment_link || "").trim() ? '<a href="' + product.payment_link + '" class="btn">BUY NOW</a>' : ''}
+            ${String(product.status || "Available").trim().toLowerCase() === "sold out" ? '<span class="btn">SOLD OUT</span>' : (String(product.payment_link || "").trim() ? '<a href="' + product.payment_link + '" class="btn">BUY NOW</a>' : '')}
           </div>
         </article>
       `).join("");
