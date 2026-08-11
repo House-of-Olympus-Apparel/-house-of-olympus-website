@@ -1,4 +1,4 @@
-backend:
+hi backend:
   name: github
   repo: House-of-Olympus-Apparel/-house-of-olympus-website
   branch: main
@@ -45,3 +45,8 @@ collections:
         name: "payment_link"
         widget: "string"
         required: false
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options: ["Available", "Sold Out"]
+        default: "Available"
