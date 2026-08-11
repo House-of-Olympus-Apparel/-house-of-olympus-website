@@ -1,0 +1,13 @@
+This version preserves the exact v12 visible design.
+
+Owner editing is added separately at /admin/.
+Until you add products, the website looks exactly like v12.
+When products are added, they replace the placeholder cards in their selected section.
+
+One-time setup still required:
+1. Connect Netlify site to GitHub.
+2. Enable Netlify Identity.
+3. Set registration to Invite only.
+4. Enable Git Gateway.
+5. Invite your owner email.
+6. Visit https://quiet-mochi-33b24c.netlify.app/admin/
