@@ -425,7 +425,22 @@
       .section-head p{font-size:.95rem;line-height:1.55}
       .products{display:grid;grid-template-columns:1fr;gap:18px}
       .product{border-radius:17px}
-      .product-visual{aspect-ratio:16/9;min-height:0;font-size:1.18rem}
+      .product-visual{
+  width:100%;
+  aspect-ratio:1 / 1;
+  overflow:hidden;
+  background:#f4e7df;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+      .product-visual img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+}
       .product-info{padding:18px}
       .category{min-height:120px}
       .story-box{padding:22px}
