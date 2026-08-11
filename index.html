@@ -997,12 +997,13 @@
             };
           })
       )
-  ))
-  .then(products => {
   const targets = {
-    "New Clothes": "cms-products",
-    "Accessories & More": "cms-accessories"
-  };
+  "New Clothes": "cms-products",
+  "Handbags": "cms-handbags",
+  "Footwear": "cms-footwear",
+  "Accessories": "cms-accessories",
+  "Home & More": "cms-home"
+};
 
   Object.entries(targets).forEach(([category, id]) => {
     const grid = document.getElementById(id);
