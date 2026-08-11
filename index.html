@@ -986,7 +986,7 @@
           .then(text => {
             const get = (key) => {
               const m = text.match(new RegExp("^" + key + ":\\s*(.+)$", "m"));
-              return m ? m[1].replace(/^["']|["']$/g, "").trim() : "";
+              return m ? m[1].trim().replace(/^["']|["']$/g, "") : "";
             };
 
             return {
