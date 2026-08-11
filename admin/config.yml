@@ -41,3 +41,7 @@ collections:
         name: "image"
         widget: "image"
         required: false
+      - label: "Stripe Payment Link"
+        name: "payment_link"
+        widget: "string"
+        required: false
