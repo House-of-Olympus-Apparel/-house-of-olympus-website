@@ -972,18 +972,48 @@
     const buy=qty<=0?`<strong>SOLD OUT</strong>`:(p.stripe_link?`<a class="btn primary" href="${esc(p.stripe_link)}" target="_blank" rel="noopener">Buy Now</a>`:`<strong>PAYMENT LINK COMING SOON</strong>`);
     return `<article class="product">${img}<div class="product-info"><h3>${esc(p.title)}</h3><div>${meta}</div>${p.description?`<p>${esc(p.description)}</p>`:""}<div class="price">$${Number(p.price||0).toFixed(2)}</div><div style="margin-top:12px">${buy}</div></div></article>`;
   }
-  fetch("/data/products.json",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(data=>{
-    if(!data || !Array.isArray(data.products) || !data.products.length) return;
-    const groups={new:[],premium:[],thrifted:[]};
-    data.products.forEach(p=>{if(groups[p.category]) groups[p.category].push(p);});
-    Object.entries(groups).forEach(([cat,items])=>{
-      if(!items.length) return;
-      const section=document.getElementById(cat);
-      if(!section) return;
-      const grid=section.querySelector(".products");
-      if(grid) grid.innerHTML=items.map(card).join("");
-    });
-  }).catch(()=>{});
+  fetch("https://api.github.com/repos/House-of-Olympus-Apparel/-house-of-olympus-website/contents/data/products")
+  .then(r => r.json())
+  .then(files => Promise.all(
+    files
+      .filter(f => f.name.endsWith(".md"))
+      .map(f =>
+        fetch(f.download_url)
+          .then(r => r.text())
+          .then(text => {
+            const get = (key) => {
+              const m = text.match(new RegExp("^" + key + ":\\s*(.+)$", "m"));
+              return m ? m[1].replace(/^["']|["']$/g, "").trim() : "";
+            };
+
+            return {
+              name: get("name"),
+              price: get("price"),
+              image: get("image")
+            };
+          })
+      )
+  ))
+  .then(products => {
+    const grid = document.getElementById("cms-products");
+    if (!grid) return;
+
+    grid.innerHTML = products.map(p => `
+      <article class="product">
+        <div class="product-visual">
+          ${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.name)}">` : ""}
+        </div>
+        <div class="product-info">
+          <h3>${esc(p.name)}</h3>
+          <strong>$${esc(p.price)}</strong>
+        </div>
+      </article>
+    `).join("");
+  })
+  .catch(() => {
+    const grid = document.getElementById("cms-products");
+    if (grid) grid.innerHTML = "<p>Products coming soon.</p>";
+  });
 })();
 </script>
 
