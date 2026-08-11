@@ -1078,7 +1078,7 @@
           <div class="product-info">
             <h3>${product.name || ""}</h3>
             <strong>$${product.price || ""}</strong>
-            ${String(product.name || "").trim().toLowerCase() === "wrangler southwestern aztec tote handbag" ? '<a href="https://buy.stripe.com/4gM9ASgTN3cBaIgfGD7Re00" class="btn">BUY NOW</a>' : ''}
+            ${String(product.name || "").trim().toLowerCase().includes("wrangler southwestern aztec tote handbag") ? '<a href="https://buy.stripe.com/4gM9ASgTN3cBaIgfGD7Re00" class="btn">BUY NOW</a>' : ''}
           </div>
         </article>
       `).join("");
