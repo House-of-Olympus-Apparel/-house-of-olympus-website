@@ -975,18 +975,34 @@
     const buy=qty<=0?`<strong>SOLD OUT</strong>`:(p.stripe_link?`<a class="btn primary" href="${esc(p.stripe_link)}" target="_blank" rel="noopener">Buy Now</a>`:`<strong>PAYMENT LINK COMING SOON</strong>`);
     return `<article class="product">${img}<div class="product-info"><h3>${esc(p.title)}</h3><div>${meta}</div>${p.description?`<p>${esc(p.description)}</p>`:""}<div class="price">$${Number(p.price||0).toFixed(2)}</div><div style="margin-top:12px">${buy}</div></div></article>`;
   }
-  fetch("https://api.github.com/repos/House-of-Olympus-Apparel/-house-of-olympus-website/contents/data/products")
-  .then(r => r.json())
-  .then(files => Promise.all(
-    files
-      .filter(f => f.name.endsWith(".md"))
-      .map(f =>
-        fetch(f.download_url)
-          .then(r => r.text())
+  fetch("https://api.github.com/repos/House-of-Olympus-Apparel/-house-of-olympus-website/contents/data/products?ref=main")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Could not load products");
+    }
+    return response.json();
+  })
+  .then(files => {
+    const productFiles = files.filter(file =>
+      file.type === "file" &&
+      (file.name.endsWith(".md") || file.name.endsWith(".markdown"))
+    );
+
+    return Promise.all(
+      productFiles.map(file =>
+        fetch(file.download_url)
+          .then(response => response.text())
           .then(text => {
-            const get = (key) => {
-              const m = text.match(new RegExp("^" + key + ":\\s*(.+)$", "m"));
-            return m ? m[1].trim().replace(/^["']|["']$/g, "") : "";
+            const get = key => {
+              const match = text.match(
+                new RegExp("^" + key + ":\\s*(.+)$", "mi")
+              );
+
+              if (!match) return "";
+
+              return match[1]
+                .trim()
+                .replace(/^["']|["']$/g, "");
             };
 
             return {
@@ -997,41 +1013,62 @@
             };
           })
       )
+    );
+  })
   .then(products => {
+
     const targets = {
-  "New Clothes": "cms-products",
-  "Handbags": "cms-handbags",
-  "Footwear": "cms-footwear",
-  "Accessories": "cms-accessories",
-  "Home & More": "cms-home"
-};
+      "New Clothes": "cms-products",
+      "Premium Clothes": "cms-premium",
+      "Thrifted Clothes": "cms-thrifted",
+      "Handbags": "cms-handbags",
+      "Footwear": "cms-footwear",
+      "Accessories": "cms-accessories",
+      "Home & More": "cms-home"
+    };
 
-  Object.entries(targets).forEach(([category, id]) => {
-    const grid = document.getElementById(id);
-    if (!grid) return;
+    Object.entries(targets).forEach(([category, id]) => {
+      const grid = document.getElementById(id);
 
-    const items = products.filter(p =>
-  String(p.category || "").replace(/^["']|["']$/g, "").trim().toLowerCase() ===
-  String(category).trim().toLowerCase()
-);
+      if (!grid) return;
 
-    grid.innerHTML = items.map(p => `
-      <article class="product">
-        <div class="product-visual">
-          ${p.image ? `<img src="${esc(p.image)}" alt="${esc(p.name)}">` : ""}
-        </div>
-        <div class="product-info">
-          <h3>${esc(p.name)}</h3>
-          <strong>$${esc(p.price)}</strong>
-        </div>
-      </article>
-    `).join("");
+      const items = products.filter(product =>
+        String(product.category || "")
+          .trim()
+          .toLowerCase() ===
+        String(category)
+          .trim()
+          .toLowerCase()
+      );
+
+      grid.innerHTML = items.map(product => `
+        <article class="product">
+          <div class="product-visual">
+            ${
+              product.image
+                ? `<img src="${product.image}" alt="${product.name || "Product"}">`
+                : ""
+            }
+          </div>
+
+          <div class="product-info">
+            <h3>${product.name || ""}</h3>
+            <strong>$${product.price || ""}</strong>
+          </div>
+        </article>
+      `).join("");
+    });
+
+  })
+  .catch(error => {
+    console.error("Product loading error:", error);
+
+    const grids = document.querySelectorAll('[id^="cms-"]');
+
+    grids.forEach(grid => {
+      grid.innerHTML = "<p>Products temporarily unavailable.</p>";
+    });
   });
-})
-.catch(() => {
-  const grid = document.getElementById("cms-products");
-  if (grid) grid.innerHTML = "<p>Products coming soon.</p>";
-});
 })();
 </script>
 
