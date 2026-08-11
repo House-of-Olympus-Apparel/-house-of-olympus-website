@@ -15,6 +15,6 @@ collections:
     fields:
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Price", name: "price", widget: "number" }
-            - { label: "Category", name: "category", widget: "select", options: ["New Clothes", "Premium Clothes", "Thrifted Clothes", "Accessories & More"] }
+                  - { label: "Category", name: "category", widget: "select", options: ["New Clothes", "Premium Clothes", "Thrifted Clothes", "Handbags", "Footwear", "Accessories", "Home & More"] }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Image", name: "image", widget: "image", required: false }
