@@ -1,5 +1,6 @@
 backend:
   name: github
+  repo: House-of-Olympus-Apparel/-house-of-olympus-website
   branch: main
 
 media_folder: "images/uploads"
