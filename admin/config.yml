@@ -12,7 +12,7 @@ collections:
     folder: "data/products"
     create: true
     slug: "{{fields.name}}"
-        fields:
+    fields:
       - label: "Name"
         name: "name"
         widget: "string"
