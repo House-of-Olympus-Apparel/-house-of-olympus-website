@@ -47,8 +47,5 @@ collections:
         required: false
       - label: "Status"
         name: "status"
-        widget: "select"
-        options:
-          - "Available"
-          - "Sold Out"
+        widget: "string"
         default: "Available"
