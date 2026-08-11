@@ -29,4 +29,5 @@ description: >-
   * Great for western, rodeo, country, or everyday wear
 image: /images/uploads/img_3782.jpeg
 payment_link: https://buy.stripe.com/4gM9ASgTN3cBaIgfGD7Re00
+status: "Sold Out "
 ---
