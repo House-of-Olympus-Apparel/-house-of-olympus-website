@@ -29,5 +29,7 @@ description: >-
   * Box shows storage/handling wear — see photos
 
   * Please review photos for exact condition. New come in damaged box.
+image: /images/uploads/img_4105.jpeg
+payment_link: https://buy.stripe.com/4gM9ASgTN3cBaIgfGD7Re00
 status: Available
 ---
