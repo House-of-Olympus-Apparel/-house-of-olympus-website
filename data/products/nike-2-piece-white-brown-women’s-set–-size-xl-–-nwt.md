@@ -1,7 +1,7 @@
 ---
 name: Nike 2-Piece White & Brown women’s set– Size XL – NWT
 price: 40
-category: New Clothes
+category: Activewear
 description: >-
   Brand new Nike two-shirt set featuring classic oversized Nike Futura logo
   graphics.
