@@ -26,5 +26,5 @@ description: >-
   Note second picture is example only and may not be exact color product in the bag is what you will receive.
 image: /images/uploads/img_4737.jpeg
 payment_link: https://buy.stripe.com/14A00icDxdRfaIgamj7Re08
-status: Available
+status: Sold
 ---
