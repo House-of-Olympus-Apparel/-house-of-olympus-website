@@ -26,7 +26,7 @@ description: >-
   * MSRP shown on tag: $139.99
 
   * Sold together as one 2-piece set
-image: /images/uploads/img_4711.jpeg
+image: /images/uploads/img_4714.jpeg
 payment_link: https://buy.stripe.com/6oUaEW1YTcNb5nW6637Re04
 status: Available
 ---
