@@ -24,7 +24,7 @@ description: >-
   * Sold together as one complete 2-piece set
 
   Note 2nd picture is an example. Picture with the plastic is what you’ll be receiving.
-image: /images/uploads/53deb0f5-8c4f-4957-8503-e6ed42d6f706.jpeg
+image: /images/uploads/img_4743.jpeg
 payment_link: https://buy.stripe.com/5kQaEW9rldRfg2A3XV7Re0c
 status: Available
 ---
