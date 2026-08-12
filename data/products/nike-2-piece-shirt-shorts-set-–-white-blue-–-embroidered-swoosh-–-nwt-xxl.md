@@ -1,6 +1,5 @@
 ---
-name: "Nike 2-Piece Shirt & Shorts Set – White/Blue – Embroidered Swoosh – NWT -
-  XXL "
+name: "Nike 2-Piece Shirt & Shorts Set – White/Blue – Embroidered Swoosh – NWT -XXL "
 price: 35
 category: Activewear
 description: >-
