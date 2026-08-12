@@ -1,5 +1,5 @@
 ---
-name: Nike 2-Piece Shirt & Shorts Set – Blue/Red – Embroidered Logo – NWT
+name: Nike 2-Piece Shirt & Shorts Set – Blue/Red – Embroidered Logo – NWT-XL
 price: 35
 category: Activewear
 description: >-
