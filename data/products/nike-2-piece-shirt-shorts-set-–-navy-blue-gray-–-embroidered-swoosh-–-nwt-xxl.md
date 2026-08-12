@@ -2,7 +2,7 @@
 name: "Nike 2-Piece Shirt & Shorts Set – Navy Blue/Gray – Embroidered Swoosh –
   NWT - XXL "
 price: 35
-category: Activewear
+category: Premium Clothes
 description: >-
   Brand new with tags Nike 2-piece outfit set featuring classic Nike styling and
   embroidered Swoosh detail.
