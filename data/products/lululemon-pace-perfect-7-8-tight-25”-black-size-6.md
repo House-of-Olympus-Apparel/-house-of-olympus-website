@@ -1,7 +1,7 @@
 ---
 name: Lululemon Pace Perfect 7/8 tight 25” Black Size 6
 price: 25
-category: Premium Clothes
+category: Women's Premium
 description: |-
   lululemon Pace Perfect 7/8 Tight 25” – Black – Size 6
 
