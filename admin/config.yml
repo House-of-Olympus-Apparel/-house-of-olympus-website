@@ -26,6 +26,7 @@ collections:
         widget: "select"
         options:
           - "New Clothes"
+          - "Activewear"
           - "Premium Clothes"
           - "Thrifted Clothes"
           - "Handbags"
