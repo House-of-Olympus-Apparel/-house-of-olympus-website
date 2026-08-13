@@ -1,37 +1,44 @@
 ---
-name: JERKO Black Athletic Sneakers –Men’s size 8
+name: FERKO Blue Athletic Sneakers – Women’s Size 8
 price: 30
 category: Footwear
 description: >-
-  Sleek JERKO all-black athletic sneakers in a versatile black-on-black
-  colorway. These feature a breathable knit-style upper, lace-up design,
-  cushioned sole, and pull tabs for easy on/off.
+  Fresh and sporty FERKO athletic sneakers in a vibrant blue colorway with navy
+  and red accents. These lightweight-looking lace-up sneakers feature a
+  breathable knit-style upper, cushioned sole, and supportive athletic design.
 
 
-  Details:
+  ✨ Details:
 
 
-  * Brand: JERKO
+  * Brand: FERKO
 
-  * Mens Size: 8
+  * Size: US 8
 
-  * Color: Black/Black
-
-  * Breathable knit-style upper
+  * Color: Blue
 
   * Lace-up closure
 
-  * Cushioned insole
+  * Breathable knit/mesh-style upper
 
-  * Durable rubber outsole
+  * Padded collar and tongue
+
+  * Cushioned midsole
+
+  * Red, white & navy contrast sole
+
+  * Textured rubber outsole for traction
 
   * Pull tabs at heel
 
-  * Original blue shoebox included
+  * Comes with original blue shoebox
 
 
-  Condition: New with box — shoes appear unworn and are in excellent condition.
-image: /images/uploads/img_4764.jpeg
-payment_link: https://buy.stripe.com/bJeaEWavp8wVdUs3XV7Re0i
-status: Available
+  Condition: New/NWT — appears unworn and comes with the original box.
+
+
+  Great for walking, workouts, gym sessions, running errands, travel, or everyday casual wear!
+image: /images/uploads/img_4765.jpeg
+payment_link: https://buy.stripe.com/00wbJ0bzt7sR6s0fGD7Re0j
+status: "Available "
 ---
