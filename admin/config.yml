@@ -21,6 +21,13 @@ collections:
         name: "price"
         widget: "number"
 
+      - label: "Quantity"
+        name: "quantity"
+        widget: "number"
+        value_type: "int"
+        min: 0
+        default: 1
+
       - label: "Category"
         name: "category"
         widget: "select"
