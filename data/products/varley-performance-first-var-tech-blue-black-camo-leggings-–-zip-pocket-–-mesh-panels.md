@@ -39,6 +39,6 @@ description: >-
 
   Condition: Pre-owned; please see photos for condition and details.
 image: /images/uploads/img_4937.jpeg
-payment_link: https://buy.stripe.com/fZu6oGdHB5kJ4jS3XV7Re0J
+payment_link: https://buy.stripe.com/8x228q32X9AZ17GfGD7Re0K
 status: Available
 ---
