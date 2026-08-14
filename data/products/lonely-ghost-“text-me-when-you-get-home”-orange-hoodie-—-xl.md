@@ -2,7 +2,7 @@
 name: Lonely Ghost “Text Me When You Get Home” Orange Hoodie — XL
 price: 50
 quantity: 1
-category: Men's New
+category: Men's Premium
 description: >-
   Make a statement in this iconic Lonely Ghost “Text Me When You Get Home”
   hoodie in a bold orange color.
