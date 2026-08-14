@@ -1,6 +1,7 @@
 ---
 name: Wrangler Southwestern Aztec Tote Handbag.
 price: 25
+quantity: 4
 category: Handbags
 description: >-
   Beautiful Wrangler western-style tote handbag featuring a
