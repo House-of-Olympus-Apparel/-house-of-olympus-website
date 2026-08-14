@@ -43,6 +43,6 @@ description: >-
 
   Measurements available upon request.
 image: /images/uploads/img_4943.jpeg
-payment_link: https://buy.stripe.com/bJe5kCfPJ3cBbMk7a77Re0Q
+payment_link: https://buy.stripe.com/28EeVcbzt3cB7w4fGD7Re0R
 status: Available
 ---
