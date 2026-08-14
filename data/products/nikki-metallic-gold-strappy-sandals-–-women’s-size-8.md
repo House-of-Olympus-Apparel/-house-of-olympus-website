@@ -1,6 +1,7 @@
 ---
 name: Nikki Metallic Gold Strappy Sandals – Women’s Size 8
 price: 20
+quantity: 1
 category: Footwear
 description: >-
   Gorgeous Nikki metallic gold sandals with a stylish strappy design! These
@@ -32,6 +33,7 @@ description: >-
   * Decorative metallic trim around the sole
 
   * Textured outsole for traction
+image: /images/uploads/img_4892.jpeg
 payment_link: https://buy.stripe.com/cNi5kCcDx8wV3fO8eb7Re0n
 status: Available
 ---
