@@ -1,6 +1,7 @@
 ---
 name: Milwaukee Performance women’s ankle boots
 price: 59
+quantity: 1
 category: Footwear
 description: Milwaukee Performance women’s ankle boots, stone gray, size9, brand
   new in box. Three buckle accents, side zip and a comfy block heel.
