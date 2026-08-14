@@ -1,7 +1,7 @@
 ---
 name: Varley Performance First Var-Tech Blue Black Camo Leggings – Zip Pocket –
   Mesh Panels
-price: 30
+price: 20
 quantity: 1
 category: Thrifted Women's
 description: >-
