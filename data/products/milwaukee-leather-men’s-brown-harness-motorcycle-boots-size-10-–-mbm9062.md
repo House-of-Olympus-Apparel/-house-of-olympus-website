@@ -1,6 +1,7 @@
 ---
 name: Milwaukee Leather Men’s Brown Harness Motorcycle Boots Size 10 – MBM9062
 price: 70
+quantity: 1
 category: Footwear
 description: >-
   Milwaukee Leather men’s brown motorcycle riding boots with classic harness
