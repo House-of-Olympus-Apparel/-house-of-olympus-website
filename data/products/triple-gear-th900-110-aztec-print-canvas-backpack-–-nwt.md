@@ -1,7 +1,7 @@
 ---
 name: Triple Gear TH900-110 Aztec Print Canvas Backpack – NWT
 price: 25
-quantity: 1
+quantity: 2
 category: Handbags
 description: >-
   🌈 Color/Pattern: Multicolor Aztec / Boho Print
