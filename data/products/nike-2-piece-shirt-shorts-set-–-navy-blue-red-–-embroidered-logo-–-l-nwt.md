@@ -26,6 +26,6 @@ description: >-
 
   Note 2nd picture is an example of only. Picture of the bag is what you will be receiving.
 image: /images/uploads/img_4735.jpeg
-payment_link: https://buy.stripe.com/aFa5kC7jd00p9Ec8eb7Re0a
+payment_link: ""
 status: Sold
 ---
