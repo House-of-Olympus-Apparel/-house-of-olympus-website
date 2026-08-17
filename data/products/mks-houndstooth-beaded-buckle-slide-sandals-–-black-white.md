@@ -38,6 +38,6 @@ description: >-
 
   • Great statement sandal for casual outfits, denim, dresses and summer looks
 image: /images/uploads/img_4893.jpeg
-payment_link: https://buy.stripe.com/00wdR8bztaF38A88eb7Re0o
+payment_link: ""
 status: Available
 ---
