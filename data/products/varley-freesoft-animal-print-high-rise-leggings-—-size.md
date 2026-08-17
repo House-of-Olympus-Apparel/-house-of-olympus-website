@@ -46,6 +46,6 @@ description: >-
 
   Please review photos for condition and exact details.
 image: /images/uploads/img_4938.jpeg
-payment_link: https://buy.stripe.com/9B628qdHB4gFdUseCz7Re0L
+payment_link: ""
 status: Available
 ---
