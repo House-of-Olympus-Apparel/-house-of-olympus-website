@@ -37,6 +37,6 @@ description: >-
 
   Perfect for summer outfits, vacations, concerts, country/western events, or anytime you want a little extra sparkle!
 image: /images/uploads/img_4901.jpeg
-payment_link: Sold
+payment_link: ""
 status: Available
 ---
