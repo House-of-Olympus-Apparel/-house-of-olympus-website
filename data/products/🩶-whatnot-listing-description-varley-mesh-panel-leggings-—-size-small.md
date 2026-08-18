@@ -1,5 +1,5 @@
 ---
-name: 🩶 Whatnot Listing Description  VARLEY MESH PANEL LEGGINGS — SIZE SMALL
+name: ❤️ VARLEY MESH PANEL LEGGINGS — SIZE SMALL
 price: 20
 quantity: 1
 category: Thrifted Women's
