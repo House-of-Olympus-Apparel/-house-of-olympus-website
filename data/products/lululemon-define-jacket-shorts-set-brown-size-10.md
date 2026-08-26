@@ -8,16 +8,10 @@ description: >-
 
   Matching two-piece activewear set featuring a fitted Define-style zip jacket and coordinating shorts. Soft, stretchy performance fabric with a streamlined athletic fit.
 
-  Details:
-  * Brand: Lululemon
-  * Set: Jacket + Shorts
-  * Color: Brown
-  * Size: 10
-  * Quantity: 1
-  * Condition: New with tags
+  Details: * Brand: Lululemon * Set: Jacket + Shorts * Color: Brown * Size: 10 * Quantity: 1 * Condition: New with tags
 
   Great for workouts, travel, errands, or everyday athleisure. Limited quantity — when this exact color/size combination sells, it is gone.
-image: /images/uploads/lululemon-shorts-brown-size-10.jpg
-payment_link: "https://buy.stripe.com/8x25kC32XdRfdUs51Z7Re1B"
+image: /images/uploads/img_5666.jpeg
+payment_link: https://buy.stripe.com/8x25kC32XdRfdUs51Z7Re1B
 status: Available
 ---
