@@ -1,6 +1,6 @@
 ---
 name: Lululemon Define Jacket & Leggings Set — Mauve — Size 8
-price: 99.99
+price: 94.99
 quantity: 1
 category: Women's Premium
 description: >-

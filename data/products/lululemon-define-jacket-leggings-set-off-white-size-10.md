@@ -1,6 +1,6 @@
 ---
 name: Lululemon Define Jacket & Leggings Set — Off White — Size 10
-price: 99.99
+price: 94.99
 quantity: 1
 category: Women's Premium
 description: >-
