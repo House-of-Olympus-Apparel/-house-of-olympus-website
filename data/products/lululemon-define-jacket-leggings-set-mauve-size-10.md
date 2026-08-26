@@ -4,7 +4,7 @@ price: 94.99
 quantity: 1
 category: Women's Premium
 description: >-
-  Lululemon Define Jacket & Leggings Set in Mauve, women's size 10.
+  Lululemon Define Jacket & Leggings Set — Mauve — Size 10.
 
   Matching two-piece activewear set featuring a fitted Define-style zip jacket and coordinating high-rise leggings. Soft, stretchy performance fabric with a streamlined athletic fit.
 
@@ -16,8 +16,8 @@ description: >-
   * Quantity: 1
   * Condition: New with tags
 
-  Great for workouts, travel, errands, or everyday athleisure. Limited quantity — when this one sells, this exact color/size combination is gone.
+  Great for workouts, travel, errands, or everyday athleisure. Limited quantity — when this exact color/size combination sells, it is gone.
 image: /images/uploads/lululemon-pants-mauve-size-10.jpeg
-payment_link: ""
+payment_link: "https://buy.stripe.com/28EcN4gTN00p4jS1PN7Re1m"
 status: Available
 ---
