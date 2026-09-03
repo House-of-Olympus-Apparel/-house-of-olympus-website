@@ -1,7 +1,7 @@
 ---
 name: Lululemon Define Jacket & Shorts Set — Brown — Size 8
 price: 84.99
-quantity: 1
+quantity: 0
 category: Women's Premium
 description: >-
   Lululemon Define Jacket & Shorts Set — Brown — Size 8.
@@ -13,5 +13,5 @@ description: >-
   Great for workouts, travel, errands, or everyday athleisure. Limited quantity — when this exact color/size combination sells, it is gone.
 image: /images/uploads/img_5655.jpeg
 payment_link: https://buy.stripe.com/cNibJ0gTNfZn9Ec1PN7Re1u
-status: Available
+status: Sold Out
 ---
