@@ -26,5 +26,5 @@ description: >-
   Note 2nd picture is an example. Picture with the plastic is what you’ll be receiving.
 image: /images/uploads/img_4743.jpeg
 payment_link: https://buy.stripe.com/5kQaEW9rldRfg2A3XV7Re0c
-status: Available
+status: Sold
 ---
