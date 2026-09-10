@@ -1,7 +1,7 @@
 ---
 name: 🤎 BRAND NEW M-16 SATCHEL HANDBAG — WITH TAGS! 🤎
 price: 15
-quantity: 1
+quantity: 0
 category: Handbags
 description: >-
   Absolutely gorgeous structured satchel in a beautiful taupe/blush brown color
