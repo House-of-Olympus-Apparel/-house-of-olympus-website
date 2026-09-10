@@ -34,5 +34,5 @@ description: >-
   • Style: SEF11-S095CF-10
 image: /images/uploads/img_4975.jpeg
 payment_link: https://buy.stripe.com/eVq14m0UP6oN4jS9if7Re0X
-status: Available
+status: Sold
 ---
