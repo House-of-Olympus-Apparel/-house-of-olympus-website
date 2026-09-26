@@ -77,9 +77,9 @@
     const action=sold?'<span class="btn">SOLD OUT</span>':(p.payment_link?`<a class="btn primary" href="${esc(p.payment_link)}" target="_blank" rel="noopener">BUY NOW</a>`:'');
     return `<article class="product"><div class="product-visual">${img}</div><div class="product-info"><h3>${esc(p.name)}</h3><strong>$${Number(p.price||0).toFixed(2)}</strong>${inventory}${action}</div></article>`;
   };
-  fetch("https://api.github.com/repos/House-of-Olympus-Apparel/-house-of-olympus-website/contents/data/products?ref=main")
+  fetch("https://api.github.com/repos/House-of-Olympus-Apparel/-house-of-olympus-website/contents/data/products?ref=main&_="+Date.now(),{cache:"no-store"})
     .then(r=>{if(!r.ok)throw new Error("Could not load products");return r.json()})
-    .then(files=>Promise.all(files.filter(f=>f.type==="file"&&(f.name.endsWith(".md")||f.name.endsWith(".markdown"))).map(f=>fetch(f.download_url).then(r=>r.text()).then(text=>({name:getField(text,"name"),price:getField(text,"price"),quantity:getField(text,"quantity"),category:getField(text,"category"),image:getField(text,"image"),payment_link:getField(text,"payment_link"),status:getField(text,"status")})))))
+    .then(files=>Promise.all(files.filter(f=>f.type==="file"&&(f.name.endsWith(".md")||f.name.endsWith(".markdown"))).map(f=>fetch(f.download_url+"?v="+Date.now(),{cache:"no-store"}).then(r=>r.text()).then(text=>({name:getField(text,"name"),price:getField(text,"price"),quantity:getField(text,"quantity"),category:getField(text,"category"),image:getField(text,"image"),payment_link:getField(text,"payment_link"),status:getField(text,"status")})))))
     .then(products=>Object.entries(targets).forEach(([category,id])=>{const grid=document.getElementById(id);if(!grid)return;const items=products.filter(p=>normalize(p.category)===normalize(category));grid.innerHTML=items.map(card).join("")}))
     .catch(err=>{console.error("Product loading error:",err);document.querySelectorAll('[id^="cms-"]').forEach(g=>g.innerHTML="<p>Products temporarily unavailable.</p>")});
 })();
