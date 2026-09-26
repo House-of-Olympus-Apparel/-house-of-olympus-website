@@ -16,6 +16,6 @@ description: >-
 
   Please note: These are pre-owned and may show normal signs of wear.
 image: https://files.stripe.com/links/MDB8YWNjdF8xVTMyd3BDb2l3UWhwb0tHfGZsX2xpdmVfWXV0RlBsZWlLWmxMRG9vWk1zZENmZFho00fTqz7Lzu
-payment_link: ""
+payment_link: https://buy.stripe.com/bJe14mfPJ14t8A8gKH7Re1C
 status: Available
 ---
