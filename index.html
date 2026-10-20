@@ -25,10 +25,11 @@
 </head>
 <body>
   <div class="announcement">House of Olympus Apparel • Built Today. Legendary Tomorrow.</div>
-  <header><nav><a class="brand" href="#">HOUSE OF OLYMPUS</a><div class="navlinks"><a href="#new">New</a><a href="#activewear">Activewear</a><a href="#premium">Premium</a><a href="#thrifted">Thrifted</a><a href="#categories">More</a><a href="#returns">Returns</a><a href="#contact">Contact</a></div><a class="btn primary" href="#new">Shop Now</a></nav></header>
+  <header><nav><a class="brand" href="#">HOUSE OF OLYMPUS</a><div class="navlinks"><a href="#shop">Shop Current Inventory</a><a href="#returns">Returns</a><a href="#contact">Contact</a></div><a class="btn primary" href="#shop">Shop Now</a></nav></header>
   <main>
-    <div class="hero"><div><div class="eyebrow">Timeless • Premium • Versatile</div><h1>Worthy of Olympus.</h1><p>House of Olympus Apparel brings together new clothing, premium apparel, activewear, hand-picked thrifted finds, handbags, footwear, accessories and more.</p><div class="hero-actions"><a class="btn primary" href="#new">New Arrivals</a><a class="btn" href="#premium">Premium</a><a class="btn" href="#thrifted">Thrifted Finds</a></div></div><div class="hero-card"><img src="images/BB8D9F51-56F4-45C2-A5F6-62392436A638.png" alt="House of Olympus Apparel branding"></div></div>
+    <div class="hero"><div><div class="eyebrow">Timeless • Premium • Versatile</div><h1>Worthy of Olympus.</h1><p>House of Olympus Apparel brings together new clothing, premium apparel, activewear, hand-picked thrifted finds, handbags, footwear, accessories and more.</p><div class="hero-actions"><a class="btn primary" href="https://www.whatnot.com/user/houseofolympusapparel/shop" target="_blank" rel="noopener noreferrer">Shop Whatnot Buy It Now</a><a class="btn" href="#shop">See Shopping Details</a></div></div><div class="hero-card"><img src="images/BB8D9F51-56F4-45C2-A5F6-62392436A638.png" alt="House of Olympus Apparel branding"></div></div>
     <div class="trust"><div>Brand-New Apparel</div><div>Premium Labels</div><div>One-of-a-Kind Finds</div></div>
+    <section id="shop" class="alt"><div class="section-inner"><div class="section-head"><div><div class="eyebrow">Shop Available Inventory</div><h2>Fresh Finds. Current Stock.</h2></div><p>Our Whatnot shop is the place to check current inventory, new arrivals and Buy It Now listings. Pieces sell quickly during live shows, so individual availability and pricing are confirmed on Whatnot before purchase.</p></div><a class="btn primary" href="https://www.whatnot.com/user/houseofolympusapparel/shop" target="_blank" rel="noopener noreferrer">Browse Whatnot Buy It Now</a></div></section>
 
     <section class="alt" id="new"><div class="section-inner"><div class="section-head"><div><div class="eyebrow">The Agora • New Arrivals</div><h2>New Clothes</h2></div><p>Brand-new clothing, including new-with-tags pieces and fresh inventory ready for its first owner.</p></div><div class="section-label">Women's New</div><div class="products" id="cms-womens-new"></div><div class="section-label">Men's New</div><div class="products" id="cms-mens-new"></div></div></section>
 
@@ -48,7 +49,7 @@
 
     <section id="contact" class="alt"><div class="section-inner"><div class="contact-panel"><div class="eyebrow">Contact House of Olympus</div><h2>Customer Support</h2><p>Questions about an order, return, product or damaged shipment?</p><a class="contact-email" href="mailto:house.of.olympus.apparel@outlook.com">house.of.olympus.apparel@outlook.com</a></div></div></section>
   </main>
-  <footer><div class="footer-inner"><div><div class="footer-brand">HOUSE OF OLYMPUS APPAREL</div><div>Timeless • Premium • Versatile</div><div class="social-links"><a class="social-link" href="https://www.instagram.com/house.of.olympus.apparel/" target="_blank" rel="noopener noreferrer">Instagram</a></div></div><div><a href="mailto:house.of.olympus.apparel@outlook.com">house.of.olympus.apparel@outlook.com</a><br>© 2026 House of Olympus Apparel. All rights reserved.</div></div></footer>
+  <footer><div class="footer-inner"><div><div class="footer-brand">HOUSE OF OLYMPUS APPAREL</div><div>Timeless • Premium • Versatile</div><div class="social-links"><a class="social-link" href="https://www.instagram.com/house.of.olympus.apparel/" target="_blank" rel="noopener noreferrer">Instagram</a><a class="social-link" href="https://www.whatnot.com/user/houseofolympusapparel/shop" target="_blank" rel="noopener noreferrer">Whatnot Shop</a></div></div><div><a href="mailto:house.of.olympus.apparel@outlook.com">house.of.olympus.apparel@outlook.com</a><br>© 2026 House of Olympus Apparel. All rights reserved.</div></div></footer>
 
 <script>
 (function(){
@@ -68,20 +69,22 @@
   };
   const normalize=v=>String(v||"").trim().toLowerCase();
   const getField=(text,key)=>{const m=text.match(new RegExp("^"+key+":\\s*(.+)$","mi"));return m?m[1].trim().replace(/^["']|["']$/g,""):""};
+  const validWhatnotLink=p=>/^https:\/\/www\.whatnot\.com\/listing\//i.test(String(p.whatnot_listing_url||""));
+  const verified=p=>validWhatnotLink(p)&&normalize(p.status)!=="sold out"&&parseInt(p.quantity,10)>0;
   const card=p=>{
     const rawQty=parseInt(p.quantity,10);
     const qty=Number.isFinite(rawQty)?Math.max(0,rawQty):1;
     const sold=normalize(p.status)==="sold out"||qty===0;
     const img=p.image?`<img src="${esc(p.image)}" alt="${esc(p.name||'Product')}">`:"";
     const inventory=!sold&&qty>1?`<div class="inventory">${qty} available</div>`:"";
-    const action=sold?'<span class="btn">SOLD OUT</span>':(p.payment_link?`<a class="btn primary" href="${esc(p.payment_link)}" target="_blank" rel="noopener">BUY NOW</a>`:'');
-    return `<article class="product"><div class="product-visual">${img}</div><div class="product-info"><h3>${esc(p.name)}</h3><strong>$${Number(p.price||0).toFixed(2)}</strong>${inventory}${action}</div></article>`;
+    const action=sold?'<span class="btn">SOLD OUT</span>':(validWhatnotLink(p)?`<a class="btn primary" href="${esc(p.whatnot_listing_url)}" target="_blank" rel="noopener noreferrer">Check on Whatnot</a>`:'');
+    return `<article class="product"><div class="product-visual">${img}</div><div class="product-info"><h3>${esc(p.name)}</h3><p>Current availability and price are confirmed on Whatnot.</p>${action}</div></article>`;
   };
   fetch("https://api.github.com/repos/House-of-Olympus-Apparel/-house-of-olympus-website/contents/data/products?ref=main&_="+Date.now(),{cache:"no-store"})
     .then(r=>{if(!r.ok)throw new Error("Could not load products");return r.json()})
-    .then(files=>Promise.all(files.filter(f=>f.type==="file"&&(f.name.endsWith(".md")||f.name.endsWith(".markdown"))).map(f=>fetch(f.download_url+"?v="+Date.now(),{cache:"no-store"}).then(r=>r.text()).then(text=>({name:getField(text,"name"),price:getField(text,"price"),quantity:getField(text,"quantity"),category:getField(text,"category"),image:getField(text,"image"),payment_link:getField(text,"payment_link"),status:getField(text,"status")})))))
-    .then(products=>Object.entries(targets).forEach(([category,id])=>{const grid=document.getElementById(id);if(!grid)return;const items=products.filter(p=>normalize(p.category)===normalize(category));grid.innerHTML=items.map(card).join("")}))
-    .catch(err=>{console.error("Product loading error:",err);document.querySelectorAll('[id^="cms-"]').forEach(g=>g.innerHTML="<p>Products temporarily unavailable.</p>")});
+    .then(files=>Promise.all(files.filter(f=>f.type==="file"&&(f.name.endsWith(".md")||f.name.endsWith(".markdown"))).map(f=>fetch(f.download_url+"?v="+Date.now(),{cache:"no-store"}).then(r=>r.text()).then(text=>({name:getField(text,"name"),price:getField(text,"price"),quantity:getField(text,"quantity"),category:getField(text,"category"),image:getField(text,"image"),payment_link:getField(text,"payment_link"),whatnot_listing_url:getField(text,"whatnot_listing_url"),status:getField(text,"status")})))))
+    .then(products=>{Object.entries(targets).forEach(([category,id])=>{const grid=document.getElementById(id);if(!grid)return;const items=products.filter(p=>normalize(p.category)===normalize(category)&&verified(p));grid.innerHTML=items.map(card).join("")});document.querySelectorAll("section").forEach(section=>{const grids=section.querySelectorAll(".products");if(grids.length&&!Array.from(grids).some(g=>g.children.length))section.hidden=true})})
+    .catch(err=>{console.error("Product loading error:",err);document.querySelectorAll("section").forEach(section=>{if(section.querySelector(".products"))section.hidden=true})});
 })();
 </script>
 </body>
