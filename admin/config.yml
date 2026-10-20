@@ -52,13 +52,7 @@ collections:
         name: "image"
         widget: "image"
         required: false
-      - label: "Whatnot Listing URL (required to appear on website)"
-        name: "whatnot_listing_url"
-        widget: "string"
-        required: false
-        hint: "Paste the live Whatnot item URL. Unverified products stay hidden from the website to prevent double-selling."
-
-      - label: "Legacy Stripe Payment Link (not shown to shoppers)"
+      - label: "Stripe Payment Link"
         name: "payment_link"
         widget: "string"
         required: false
