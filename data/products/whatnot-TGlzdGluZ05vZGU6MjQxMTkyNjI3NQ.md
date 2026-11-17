@@ -1,7 +1,7 @@
 ---
 name: "Lululemon Ebb to Street Tank – Fuchsia Pink – Size 10"
 price: 29
-quantity: 1
+quantity: 2
 category: "Activewear"
 description: >-
   Condition: New With Tags. Lululemon Ebb to Street Tank – Fuchsia Pink – Size 10 Gorgeous fuchsia pink lululemon Ebb to Street Tank featuring a flattering scoop neckline, racerback design, and soft ribbed fabric with a sleek, fitted silhouette. Perfect for workouts, yoga, or everyday athleisure. New with original tags attached! Size: 10 Color: Fuchsia pink Style: Ebb to Street Tank Condition: New with tags (NWT) Purchase and current stock availability are managed on Whatnot.
